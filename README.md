@@ -42,19 +42,19 @@
 ![Авторизация по адресу: http://130.193.51.77/zabbix](image.png)
 1. Приложите в файл README.md текст использованных команд в GitHub.
 ### Ответ:
-   sudo apt update
-   sudo apt install postgres
-   sudo apt install postgresql
-   wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4%2Bdebian11_all.deb 
-   sudo dpkg -i zabbix-release_latest_6.0+debian11_all.deb
-   sudo apt update
-   sudo apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts
-   sudo -u postgres createuser --pwprompt zabbix
-   sudo -u postgres createdb -O zabbix zabbix
-   zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
-   DBPassword=111
-   sudo systemctl restart zabbix-server apache2
-   sudo systemctl enable zabbix-server apache2
+   - sudo apt update
+   - sudo apt install postgres
+   - sudo apt install postgresql
+   - wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4%2Bdebian11_all.deb 
+   - sudo dpkg -i zabbix-release_latest_6.0+debian11_all.deb
+   - sudo apt update
+   - sudo apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts
+   - sudo -u postgres createuser --pwprompt zabbix
+   - sudo -u postgres createdb -O zabbix zabbix
+   - zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
+   - DBPassword=111 в файле /etc/zabbix/zabbix_server.conf
+   - sudo systemctl restart zabbix-server apache2
+   - sudo systemctl enable zabbix-server apache2
 
 ---
 
@@ -77,12 +77,12 @@
 3. Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
    ![Данные поступают от агентов Test Machine и Test Machine2](image-4.png)
 4. Приложите в файл README.md текст использованных команд в GitHub
-   wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_latest_6.0+debian11_all.deb
-   sudo dpkg -i zabbix-release_latest_6.0+debian11_all.deb
-   sudo apt update
-   sudo apt install zabbix-agent
-   sudo systemctl restart zabbix-agent
-   sudo systemctl enable zabbix-agent
+   - wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_latest_6.0+debian11_all.deb
+   - sudo dpkg -i zabbix-release_latest_6.0+debian11_all.deb
+   - sudo apt update
+   - sudo apt install zabbix-agent
+   - sudo systemctl restart zabbix-agent
+   - sudo systemctl enable zabbix-agent
 
 ---
 ## Задание 3 со звёздочкой*
